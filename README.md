@@ -3,7 +3,7 @@
 
 # Feed Reader Testing Project
 
-### Testing the Feed Reader app using Javascript testing framework Jasmine.
+#### Testing the Feed Reader app using Javascript testing framework Jasmine.
 
 ### To run this project you need to :
 1. Click on the green *clone or download* button.
