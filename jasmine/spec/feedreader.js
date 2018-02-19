@@ -37,8 +37,8 @@ $(function() {
 
          it('URLs are defined and not empty', function(){
           allFeeds.forEach( function(feed,i){
-            expect(allFeeds[i].url).toBeDefined();
-            expect(allFeeds[i].url.length).not.toBe(0);
+            expect(feed.url).toBeDefined();
+            expect(feed.url.length).not.toBe(0);
 
           });
         });
@@ -63,11 +63,11 @@ $(function() {
 
     describe('The menu', function(){
 
-      var $body;
+
       var menuIcon;
       beforeEach(function(){
-      body=  document.body;
-      menuIcon = document.getElementsByClassName('icon-list');
+        body=  document.body;
+        menuIcon = document.getElementsByClassName('icon-list');
 
       });
 
@@ -126,7 +126,7 @@ $(function() {
 
 
        it('has at least one entery',function(){
-        entry = $('.entry').html();
+        entry = $('.feed .entry').length;
         expect(entry).not.toBe(0);
         });
 
@@ -136,7 +136,7 @@ $(function() {
     /* TODO: Write a new test suite named "New Feed Selection" */
     describe('New Feed Selection',function(){
 
-      var firstFeed, SecondFeed;
+      var firstFeed, secondFeed;
 
       beforeEach(function(done){
         loadFeed(0,function(){
@@ -154,7 +154,7 @@ $(function() {
        */
        it('feed is changed',function(){
          SecondFeed = $('.feed').html();
-         expect(firstFeed).not.toEqual(SecondFeed);
+         expect(firstFeed).not.toEqual(secondFeed);
 
 
 
