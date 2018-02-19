@@ -36,7 +36,7 @@ $(function() {
          */
 
          it('URLs are defined and not empty', function(){
-          allFeeds.forEach( function(feed,i){
+          allFeeds.forEach( function(feed){
             expect(feed.url).toBeDefined();
             expect(feed.url.length).not.toBe(0);
 
@@ -49,9 +49,9 @@ $(function() {
          */
 
          it('Feed names are defined and not empty', function(){
-          allFeeds.forEach( function(feed,i){
-            expect(allFeeds[i].name).toBeDefined();
-            expect(allFeeds[i].name.length).not.toBe(0);
+          allFeeds.forEach( function(feed){
+            expect(feed.name).toBeDefined();
+            expect(feed.name.length).not.toBe(0);
 
           });
         });
@@ -64,12 +64,12 @@ $(function() {
     describe('The menu', function(){
 
 
-      var menuIcon;
-      beforeEach(function(){
-        body=  document.body;
-        menuIcon = document.getElementsByClassName('icon-list');
+      var menuIcon, body;
 
-      });
+      body=  document.body;
+      menuIcon = document.getElementsByClassName('icon-list');
+
+
 
       /* TODO: Write a test that ensures the menu element is
        * hidden by default. You'll have to analyze the HTML and
@@ -153,7 +153,7 @@ $(function() {
        * Remember, loadFeed() is asynchronous.
        */
        it('feed is changed',function(){
-         SecondFeed = $('.feed').html();
+         secondFeed = $('.feed').html();
          expect(firstFeed).not.toEqual(secondFeed);
 
 
