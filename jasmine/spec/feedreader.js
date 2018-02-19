@@ -119,7 +119,7 @@ $(function() {
 
            done();
 
-         })
+         });
 
 
         });
@@ -145,7 +145,7 @@ $(function() {
             done();
 
           });
-        })
+        });
       });
 
       /* TODO: Write a test that ensures when a new feed is loaded
